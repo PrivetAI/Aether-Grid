@@ -1,0 +1,208 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+/* Begin PBXBuildFile section */
+		B349010BB5C24A87955BEB6D /* SpellforgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C8D9E0CAD4612B022B4F5 /* SpellforgeApp.swift */; };
+		EF70F56C502B42FBA555F247 /* SpellforgeWebPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8BF133ADA944F2B164678A /* SpellforgeWebPanel.swift */; };
+		A10EED709B5843C1BF5D2AA3 /* SpellforgeLoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC42ADBDDD0D484F8926B43E /* SpellforgeLoadingScreen.swift */; };
+		857C6EF19E314DDB8A18C54B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F723BCE624524012A40A1AB9 /* Theme.swift */; };
+		516DBA2B789D4786AA628CB2 /* RuneShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA11FA5AE649EBB8BF03C5 /* RuneShapes.swift */; };
+		ABE9FCA8A2E74914A8F2825C /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BB38F5EB8743E1955FDE11 /* Elements.swift */; };
+		4DDAB2F40BBC4991B2EA93CB /* ReactionMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D67B98F8CDE420FA014589B /* ReactionMatrix.swift */; };
+		BC19A1BE8AB146FA9328BB92 /* Spells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E2D4D20043E39FB34677 /* Spells.swift */; };
+		61B67397A42C461CA60DDBE2 /* MageClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAACF87765484182850DE0 /* MageClasses.swift */; };
+		B5A37CD002794AFA8F48B59C /* Enemies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC042FD6764547B5067AEE /* Enemies.swift */; };
+		F186044953DE446BA325473C /* Bosses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F175CD4044C969833589C /* Bosses.swift */; };
+		D8B8471EA3B443FF8F299585 /* Terrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A98FD648074777B7CB7C8B /* Terrain.swift */; };
+		CB451B6F492243AFA39560F2 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB02CA6B1D1D464C8EEBAD63 /* Mission.swift */; };
+		405C392A226049679B0E821C /* MissionsR1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1020325F9D41E5B12395D9 /* MissionsR1.swift */; };
+		FB43C70160D246EC8F76898A /* MissionsR2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA533808204CDEA07B5AFE /* MissionsR2.swift */; };
+		1C306AF5A29949F2AAA97132 /* MissionsR3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEF4433764242318CA65510 /* MissionsR3.swift */; };
+		D6F4A3CA33144A3386F7C750 /* MissionsR4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68D1084B8A4480B315CD32 /* MissionsR4.swift */; };
+		C720BFCEB0C3416BA5DB0F1B /* MissionsR5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728DAB3F2FD48FE811681EF /* MissionsR5.swift */; };
+		B93436A77CE14C489DECC52E /* MissionsR6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDB9F5D45E4CB9878382F3 /* MissionsR6.swift */; };
+		95059341E98E47CF86355D60 /* Achievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3C56DCB0B416FAA523EA2 /* Achievements.swift */; };
+		48C45D98CE344C85824574AE /* GrimoireContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32BF788848F4E5FB79868EA /* GrimoireContent.swift */; };
+		8432E4ED8D6548798BCFF41A /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5638A74BB2648B4B4084C24 /* GameState.swift */; };
+		178D27D59C514E149553BFBA /* BattleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3960ABF98B049E6AE547CEE /* BattleModels.swift */; };
+		DE9D9810E9C74DCDB7A24EBE /* BattleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9DF145F2849AA9CA94D24 /* BattleEngine.swift */; };
+		2B4137BE78C5433E91E46666 /* EnemyAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8CE45C4D242C3995B601E /* EnemyAI.swift */; };
+		2B4263D018024C759948AF77 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4F805C59984B3991F5C51D /* Persistence.swift */; };
+		C0F6AB46B5AB492CAD95EEF5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127534B3AF174C4BADF80BC9 /* RootView.swift */; };
+		7C9F8B736F784A2EB0BC9B0B /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2452C396229C4676BD8DBD75 /* MainMenuView.swift */; };
+		CAF62E7C5B3347B4B917C956 /* RegionMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFB0F519FC482D818F6ABD /* RegionMapView.swift */; };
+		37A150AFE68B482DBC57CC80 /* MissionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70340811088A4D5398CEA3B3 /* MissionSelectView.swift */; };
+		1E2CB437935F48588F14663E /* LoadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66699083B9084E6C842BF28B /* LoadoutView.swift */; };
+		6DEF6A555F1C4B9FA8BA4899 /* BattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B942D98FB64C0B9B9B322B /* BattleView.swift */; };
+		639C5A30FEB348648990880B /* BattleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73795B8C16248FB8AAAE975 /* BattleGridView.swift */; };
+		AA4AE054E9834A33B2D2D759 /* MissionResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B815A9501074FD1A878D2EE /* MissionResultView.swift */; };
+		613716DC4E2B4D3AABB24C1D /* SpellLabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49BE423FFE4738B45D7504 /* SpellLabView.swift */; };
+		AEBBB938FDAF4D9686B745D9 /* GrimoireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E980D378DF4F11BFF3C31B /* GrimoireView.swift */; };
+		87783B08F12E4CC79D79A7BA /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33664BA5DB04702852CD75C /* AchievementsView.swift */; };
+		B3B32FC9634F46D3AAEEB8FB /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C155A1D41548E1A3D539E0 /* StatisticsView.swift */; };
+		39C4CC40E36948478E3C1CF7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BF9E0D1F248369409B84D /* SettingsView.swift */; };
+		F451D554068649DA9C4E8241 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628DB7953A747B7A0C9090D /* OnboardingView.swift */; };
+		A0120CD1147746749C6C334C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37D002FE01349A096591AC7 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+/* Begin PBXFileReference section */
+		B597E36C1A324C1E97EB7413 /* Spellforge Tactics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spellforge Tactics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9C8D9E0CAD4612B022B4F5 /* SpellforgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellforgeApp.swift; sourceTree = "<group>"; };
+		BD8BF133ADA944F2B164678A /* SpellforgeWebPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellforgeWebPanel.swift; sourceTree = "<group>"; };
+		FC42ADBDDD0D484F8926B43E /* SpellforgeLoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellforgeLoadingScreen.swift; sourceTree = "<group>"; };
+		F723BCE624524012A40A1AB9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BCCA11FA5AE649EBB8BF03C5 /* RuneShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneShapes.swift; sourceTree = "<group>"; };
+		09BB38F5EB8743E1955FDE11 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		6D67B98F8CDE420FA014589B /* ReactionMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionMatrix.swift; sourceTree = "<group>"; };
+		4DF8E2D4D20043E39FB34677 /* Spells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spells.swift; sourceTree = "<group>"; };
+		ECEAACF87765484182850DE0 /* MageClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MageClasses.swift; sourceTree = "<group>"; };
+		4CBC042FD6764547B5067AEE /* Enemies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemies.swift; sourceTree = "<group>"; };
+		901F175CD4044C969833589C /* Bosses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bosses.swift; sourceTree = "<group>"; };
+		19A98FD648074777B7CB7C8B /* Terrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Terrain.swift; sourceTree = "<group>"; };
+		DB02CA6B1D1D464C8EEBAD63 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		FC1020325F9D41E5B12395D9 /* MissionsR1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsR1.swift; sourceTree = "<group>"; };
+		2ABA533808204CDEA07B5AFE /* MissionsR2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsR2.swift; sourceTree = "<group>"; };
+		BFEF4433764242318CA65510 /* MissionsR3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsR3.swift; sourceTree = "<group>"; };
+		2E68D1084B8A4480B315CD32 /* MissionsR4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsR4.swift; sourceTree = "<group>"; };
+		1728DAB3F2FD48FE811681EF /* MissionsR5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsR5.swift; sourceTree = "<group>"; };
+		52CDB9F5D45E4CB9878382F3 /* MissionsR6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsR6.swift; sourceTree = "<group>"; };
+		1BF3C56DCB0B416FAA523EA2 /* Achievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievements.swift; sourceTree = "<group>"; };
+		D32BF788848F4E5FB79868EA /* GrimoireContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrimoireContent.swift; sourceTree = "<group>"; };
+		D5638A74BB2648B4B4084C24 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		C3960ABF98B049E6AE547CEE /* BattleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleModels.swift; sourceTree = "<group>"; };
+		FCA9DF145F2849AA9CA94D24 /* BattleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleEngine.swift; sourceTree = "<group>"; };
+		27C8CE45C4D242C3995B601E /* EnemyAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyAI.swift; sourceTree = "<group>"; };
+		8B4F805C59984B3991F5C51D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		127534B3AF174C4BADF80BC9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2452C396229C4676BD8DBD75 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		4AEFB0F519FC482D818F6ABD /* RegionMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionMapView.swift; sourceTree = "<group>"; };
+		70340811088A4D5398CEA3B3 /* MissionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionSelectView.swift; sourceTree = "<group>"; };
+		66699083B9084E6C842BF28B /* LoadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadoutView.swift; sourceTree = "<group>"; };
+		F5B942D98FB64C0B9B9B322B /* BattleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleView.swift; sourceTree = "<group>"; };
+		F73795B8C16248FB8AAAE975 /* BattleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGridView.swift; sourceTree = "<group>"; };
+		3B815A9501074FD1A878D2EE /* MissionResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionResultView.swift; sourceTree = "<group>"; };
+		1F49BE423FFE4738B45D7504 /* SpellLabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellLabView.swift; sourceTree = "<group>"; };
+		21E980D378DF4F11BFF3C31B /* GrimoireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrimoireView.swift; sourceTree = "<group>"; };
+		A33664BA5DB04702852CD75C /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		E0C155A1D41548E1A3D539E0 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		EC3BF9E0D1F248369409B84D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9628DB7953A747B7A0C9090D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		F37D002FE01349A096591AC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45D70378046C4A9886B2C6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+/* Begin PBXFrameworksBuildPhase section */
+		1C6C9426C75C4BDE9AAB3820 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+/* Begin PBXGroup section */
+		399D3E18E7BE4098B2D9335D = {isa = PBXGroup; children = (BB3678BC673F4165B00C62B4 /* Spellforge Tactics */, C6D7F0BEF86246BF97127B77 /* Products */, ); sourceTree = "<group>"; };
+		BB3678BC673F4165B00C62B4 /* Spellforge Tactics */ = {isa = PBXGroup; children = (DD9C8D9E0CAD4612B022B4F5 /* SpellforgeApp.swift */, BD8BF133ADA944F2B164678A /* SpellforgeWebPanel.swift */, FC42ADBDDD0D484F8926B43E /* SpellforgeLoadingScreen.swift */, F723BCE624524012A40A1AB9 /* Theme.swift */, BCCA11FA5AE649EBB8BF03C5 /* RuneShapes.swift */, 09BB38F5EB8743E1955FDE11 /* Elements.swift */, 6D67B98F8CDE420FA014589B /* ReactionMatrix.swift */, 4DF8E2D4D20043E39FB34677 /* Spells.swift */, ECEAACF87765484182850DE0 /* MageClasses.swift */, 4CBC042FD6764547B5067AEE /* Enemies.swift */, 901F175CD4044C969833589C /* Bosses.swift */, 19A98FD648074777B7CB7C8B /* Terrain.swift */, DB02CA6B1D1D464C8EEBAD63 /* Mission.swift */, FC1020325F9D41E5B12395D9 /* MissionsR1.swift */, 2ABA533808204CDEA07B5AFE /* MissionsR2.swift */, BFEF4433764242318CA65510 /* MissionsR3.swift */, 2E68D1084B8A4480B315CD32 /* MissionsR4.swift */, 1728DAB3F2FD48FE811681EF /* MissionsR5.swift */, 52CDB9F5D45E4CB9878382F3 /* MissionsR6.swift */, 1BF3C56DCB0B416FAA523EA2 /* Achievements.swift */, D32BF788848F4E5FB79868EA /* GrimoireContent.swift */, D5638A74BB2648B4B4084C24 /* GameState.swift */, C3960ABF98B049E6AE547CEE /* BattleModels.swift */, FCA9DF145F2849AA9CA94D24 /* BattleEngine.swift */, 27C8CE45C4D242C3995B601E /* EnemyAI.swift */, 8B4F805C59984B3991F5C51D /* Persistence.swift */, 127534B3AF174C4BADF80BC9 /* RootView.swift */, 2452C396229C4676BD8DBD75 /* MainMenuView.swift */, 4AEFB0F519FC482D818F6ABD /* RegionMapView.swift */, 70340811088A4D5398CEA3B3 /* MissionSelectView.swift */, 66699083B9084E6C842BF28B /* LoadoutView.swift */, F5B942D98FB64C0B9B9B322B /* BattleView.swift */, F73795B8C16248FB8AAAE975 /* BattleGridView.swift */, 3B815A9501074FD1A878D2EE /* MissionResultView.swift */, 1F49BE423FFE4738B45D7504 /* SpellLabView.swift */, 21E980D378DF4F11BFF3C31B /* GrimoireView.swift */, A33664BA5DB04702852CD75C /* AchievementsView.swift */, E0C155A1D41548E1A3D539E0 /* StatisticsView.swift */, EC3BF9E0D1F248369409B84D /* SettingsView.swift */, 9628DB7953A747B7A0C9090D /* OnboardingView.swift */, F37D002FE01349A096591AC7 /* Assets.xcassets */, 45D70378046C4A9886B2C6A7 /* Info.plist */, ); path = "Spellforge Tactics"; sourceTree = "<group>"; };
+		C6D7F0BEF86246BF97127B77 /* Products */ = {isa = PBXGroup; children = (B597E36C1A324C1E97EB7413 /* Spellforge Tactics.app */, ); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+/* Begin PBXNativeTarget section */
+		1FA2D0CB964248BFA03F4B7B /* Spellforge Tactics */ = {isa = PBXNativeTarget; buildConfigurationList = 64D38E2146EB4771861440AA /* Build configuration list for PBXNativeTarget */; buildPhases = (0D3CCFA6D0A8470CA46C85EB /* Sources */, 1C6C9426C75C4BDE9AAB3820 /* Frameworks */, 492284FCF0824C489B123609 /* Resources */, ); buildRules = (); dependencies = (); name = "Spellforge Tactics"; productName = "Spellforge Tactics"; productReference = B597E36C1A324C1E97EB7413 /* Spellforge Tactics.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+/* Begin PBXProject section */
+		0961F7B8F65C481FB8D66BD6 /* Project object */ = {isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; TargetAttributes = { 1FA2D0CB964248BFA03F4B7B = { CreatedOnToolsVersion = 15.0; }; }; }; buildConfigurationList = E19B0E9387A04630B2A5CB41 /* Build configuration list for PBXProject */; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base, ); mainGroup = 399D3E18E7BE4098B2D9335D; productRefGroup = C6D7F0BEF86246BF97127B77 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (1FA2D0CB964248BFA03F4B7B /* Spellforge Tactics */, ); };
+/* End PBXProject section */
+/* Begin PBXResourcesBuildPhase section */
+		492284FCF0824C489B123609 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A0120CD1147746749C6C334C /* Assets.xcassets in Resources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+/* Begin PBXSourcesBuildPhase section */
+		0D3CCFA6D0A8470CA46C85EB /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B349010BB5C24A87955BEB6D /* SpellforgeApp.swift in Sources */, EF70F56C502B42FBA555F247 /* SpellforgeWebPanel.swift in Sources */, A10EED709B5843C1BF5D2AA3 /* SpellforgeLoadingScreen.swift in Sources */, 857C6EF19E314DDB8A18C54B /* Theme.swift in Sources */, 516DBA2B789D4786AA628CB2 /* RuneShapes.swift in Sources */, ABE9FCA8A2E74914A8F2825C /* Elements.swift in Sources */, 4DDAB2F40BBC4991B2EA93CB /* ReactionMatrix.swift in Sources */, BC19A1BE8AB146FA9328BB92 /* Spells.swift in Sources */, 61B67397A42C461CA60DDBE2 /* MageClasses.swift in Sources */, B5A37CD002794AFA8F48B59C /* Enemies.swift in Sources */, F186044953DE446BA325473C /* Bosses.swift in Sources */, D8B8471EA3B443FF8F299585 /* Terrain.swift in Sources */, CB451B6F492243AFA39560F2 /* Mission.swift in Sources */, 405C392A226049679B0E821C /* MissionsR1.swift in Sources */, FB43C70160D246EC8F76898A /* MissionsR2.swift in Sources */, 1C306AF5A29949F2AAA97132 /* MissionsR3.swift in Sources */, D6F4A3CA33144A3386F7C750 /* MissionsR4.swift in Sources */, C720BFCEB0C3416BA5DB0F1B /* MissionsR5.swift in Sources */, B93436A77CE14C489DECC52E /* MissionsR6.swift in Sources */, 95059341E98E47CF86355D60 /* Achievements.swift in Sources */, 48C45D98CE344C85824574AE /* GrimoireContent.swift in Sources */, 8432E4ED8D6548798BCFF41A /* GameState.swift in Sources */, 178D27D59C514E149553BFBA /* BattleModels.swift in Sources */, DE9D9810E9C74DCDB7A24EBE /* BattleEngine.swift in Sources */, 2B4137BE78C5433E91E46666 /* EnemyAI.swift in Sources */, 2B4263D018024C759948AF77 /* Persistence.swift in Sources */, C0F6AB46B5AB492CAD95EEF5 /* RootView.swift in Sources */, 7C9F8B736F784A2EB0BC9B0B /* MainMenuView.swift in Sources */, CAF62E7C5B3347B4B917C956 /* RegionMapView.swift in Sources */, 37A150AFE68B482DBC57CC80 /* MissionSelectView.swift in Sources */, 1E2CB437935F48588F14663E /* LoadoutView.swift in Sources */, 6DEF6A555F1C4B9FA8BA4899 /* BattleView.swift in Sources */, 639C5A30FEB348648990880B /* BattleGridView.swift in Sources */, AA4AE054E9834A33B2D2D759 /* MissionResultView.swift in Sources */, 613716DC4E2B4D3AABB24C1D /* SpellLabView.swift in Sources */, AEBBB938FDAF4D9686B745D9 /* GrimoireView.swift in Sources */, 87783B08F12E4CC79D79A7BA /* AchievementsView.swift in Sources */, B3B32FC9634F46D3AAEEB8FB /* StatisticsView.swift in Sources */, 39C4CC40E36948478E3C1CF7 /* SettingsView.swift in Sources */, F451D554068649DA9C4E8241 /* OnboardingView.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+/* Begin XCBuildConfiguration section */
+		39E23A259D28408DA0868C6F /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)", );
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			}; name = Debug; };
+		E38BF327868B49B8AFCF26B6 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			}; name = Release; };
+		FD3941C5D3FC43E9B27BF810 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Spellforge Tactics/Info.plist";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spellforgetactics.app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			}; name = Debug; };
+		0272392F9D1549DD941B806E /* Release */ = {isa = XCBuildConfiguration; buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Spellforge Tactics/Info.plist";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.spellforgetactics.app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			}; name = Release; };
+/* End XCBuildConfiguration section */
+/* Begin XCConfigurationList section */
+		E19B0E9387A04630B2A5CB41 /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (39E23A259D28408DA0868C6F /* Debug */, E38BF327868B49B8AFCF26B6 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		64D38E2146EB4771861440AA /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (FD3941C5D3FC43E9B27BF810 /* Debug */, 0272392F9D1549DD941B806E /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 0961F7B8F65C481FB8D66BD6 /* Project object */;
+}
