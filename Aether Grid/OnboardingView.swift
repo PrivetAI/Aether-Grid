@@ -91,7 +91,7 @@ struct OnboardingView: View {
 
     private var stepTitle: String {
         switch step {
-        case 0: return "Welcome, Spellforger"
+        case 0: return "Welcome, Aether Grid"
         case 1: return "Move and Cast"
         case 2: return "Elements React"
         case 3: return "Read the Field"

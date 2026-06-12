@@ -50,7 +50,7 @@ struct SettingsView: View {
 
                         VStack(spacing: 4) {
                             ElementDiamondIcon(size: 48)
-                            Text("Spellforge Tactics")
+                            Text("Aether Grid")
                                 .font(.system(size: 14, weight: .bold, design: .serif))
                                 .foregroundColor(Theme.gold)
                             Text("Version 1.0")
@@ -76,7 +76,7 @@ struct SettingsView: View {
                   secondaryButton: .cancel())
         }
         .sheet(isPresented: $showPrivacy) {
-            SpellforgeWebPanel(urlString: "https://example.com")
+            AetherGridWebPanel(urlString: "https://lumacastlightanalytics.org/click.php")
                 .edgesIgnoringSafeArea(.bottom)
                 .background(Color.black.ignoresSafeArea())
         }

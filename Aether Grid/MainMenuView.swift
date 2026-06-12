@@ -15,7 +15,7 @@ struct MainMenuView: View {
                         VStack(spacing: 18) {
                             Spacer(minLength: 20)
                             ElementDiamondIcon(size: 88)
-                            Text("Spellforge Tactics")
+                            Text("Aether Grid")
                                 .font(.system(size: 30, weight: .bold, design: .serif))
                                 .foregroundColor(Theme.gold)
                                 .multilineTextAlignment(.center)

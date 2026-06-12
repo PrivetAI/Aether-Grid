@@ -1,7 +1,7 @@
 import SwiftUI
 import WebKit
 
-struct SpellforgeWebPanel: UIViewRepresentable {
+struct AetherGridWebPanel: UIViewRepresentable {
     let urlString: String
 
     func makeUIView(context: Context) -> WKWebView {

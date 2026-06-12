@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SpellforgeLoadingScreen: View {
+struct AetherGridLoadingScreen: View {
     @State private var pulse = false
     @State private var spin = false
 
@@ -22,7 +22,7 @@ struct SpellforgeLoadingScreen: View {
                         .scaleEffect(pulse ? 1.08 : 0.92)
                         .animation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true), value: pulse)
                 }
-                Text("Spellforge Tactics")
+                Text("Aether Grid")
                     .font(.system(size: 26, weight: .bold, design: .serif))
                     .foregroundColor(Theme.gold)
                 Text("Weaving the ley-lines...")
