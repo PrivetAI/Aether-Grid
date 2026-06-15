@@ -4,8 +4,10 @@ struct LoadoutView: View {
     @EnvironmentObject var store: GameStore
     let mission: MissionDef
 
+    @Environment(\.presentationMode) private var presentation
     @State private var selected: [String] = []
     @State private var goBattle = false
+    @State private var battleWon = false
 
     var body: some View {
         GeometryReader { geo in
@@ -49,12 +51,21 @@ struct LoadoutView: View {
             }
             .background(
                 NavigationLink(isActive: $goBattle) {
-                    BattleHostView(mission: mission, party: selectedClasses())
+                    BattleHostView(mission: mission, party: selectedClasses(),
+                                   goBattle: $goBattle, battleWon: $battleWon)
                 } label: { EmptyView() }.hidden()
             )
         }
         .navigationBarTitle("Loadout", displayMode: .inline)
         .onAppear { preselect() }
+        .onChange(of: goBattle) { active in
+            // After a won battle the player leaves the loadout too, landing back on the
+            // mission list with updated stars. A loss stays here to re-begin or go back.
+            if !active && battleWon {
+                battleWon = false
+                presentation.wrappedValue.dismiss()
+            }
+        }
     }
 
     private func preselect() {

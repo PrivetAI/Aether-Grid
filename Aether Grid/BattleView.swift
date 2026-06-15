@@ -4,9 +4,12 @@ import SwiftUI
 // store is available, so progression writes target the real shared GameStore.
 struct BattleHostView: View {
     @EnvironmentObject var store: GameStore
-    @Environment(\.presentationMode) var presentation
     let mission: MissionDef
     let party: [MageClass]
+    // Owned by LoadoutView. Setting goBattle = false pops this view; battleWon tells
+    // LoadoutView whether to also return to the mission list.
+    @Binding var goBattle: Bool
+    @Binding var battleWon: Bool
 
     @State private var engine: BattleEngine? = nil
     @State private var showResult = false
@@ -29,21 +32,25 @@ struct BattleHostView: View {
                                 resultStars = engine.computeStars()
                                 resultEssence = engine.won ? engine.essenceReward() : 0
                                 resultBonus = engine.bonusSatisfied()
-                                showResult = true
+                                withAnimation { showResult = true }
                             }
                         }
                     }
             } else {
                 Color.black.edgesIgnoringSafeArea(.all)
             }
-            NavigationLink(isActive: $showResult) {
+
+            // Result is an OVERLAY, not a nested NavigationLink: pushing it as a child
+            // link conflicts with dismissing this view, which left the button dead.
+            if showResult {
                 MissionResultView(mission: mission,
                                   won: resultWon,
                                   stars: resultStars,
                                   essence: resultEssence,
                                   bonusMet: resultBonus,
-                                  onRetry: { retry() })
-            } label: { EmptyView() }.hidden()
+                                  onRetry: { leaveBattle(won: resultWon) })
+                    .transition(.opacity)
+            }
         }
         .navigationBarHidden(true)
         .onAppear {
@@ -53,8 +60,11 @@ struct BattleHostView: View {
         }
     }
 
-    private func retry() {
-        presentation.wrappedValue.dismiss()
+    // Win → Continue: pop out and let LoadoutView return to the mission list.
+    // Loss → Retry: pop back to the loadout so the player can re-begin or exit.
+    private func leaveBattle(won: Bool) {
+        battleWon = won
+        goBattle = false
     }
 }
 
