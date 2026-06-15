@@ -41,7 +41,15 @@ struct BattleGridView: View {
                 }
                 // Units
                 ForEach(engine.units.filter { $0.alive }, id: \.id) { u in
-                    UnitTokenView(unit: u, selected: isSelectedMage(u), cell: cell)
+                    UnitTokenView(isMage: u.side == .mage,
+                                  mageClassId: u.mageClassId,
+                                  isBoss: u.isBoss,
+                                  behavior: u.behavior,
+                                  stunned: u.stunned,
+                                  hp: u.hp,
+                                  maxHP: u.maxHP,
+                                  selected: isSelectedMage(u),
+                                  cell: cell)
                         .frame(width: cell, height: cell)
                         .position(x: CGFloat(u.pos.x)*cell + cell/2,
                                   y: CGFloat(u.pos.y)*cell + cell/2)
@@ -161,35 +169,36 @@ struct TileCellView: View {
     }
 }
 
+// Driven by VALUE-TYPE inputs (hp/maxHP/etc.), not the BattleUnit class. SwiftUI diffs a
+// child by its stored inputs; a class reference keeps the same identity when only its hp
+// mutates, so SwiftUI would skip redrawing and the HP bar froze. Passing scalars fixes it.
 struct UnitTokenView: View {
-    @ObservedObject var unitBox: UnitObservable
+    let isMage: Bool
+    let mageClassId: String?
+    let isBoss: Bool
+    let behavior: EnemyBehavior
+    let stunned: Bool
+    let hp: Int
+    let maxHP: Int
     let selected: Bool
     let cell: CGFloat
 
-    init(unit: BattleUnit, selected: Bool, cell: CGFloat) {
-        self.unitBox = UnitObservable(unit)
-        self.selected = selected
-        self.cell = cell
-    }
-
     var body: some View {
-        let u = unitBox.unit
-        let isMage = u.side == .mage
-        let color: Color = isMage ? (u.mageClassId.flatMap { MageRoster.byId($0)?.element.color } ?? Theme.gold)
-                                   : (u.isBoss ? Theme.danger : Theme.poison)
+        let color: Color = isMage ? (mageClassId.flatMap { MageRoster.byId($0)?.element.color } ?? Theme.gold)
+                                   : (isBoss ? Theme.danger : Theme.poison)
         ZStack {
             Circle()
                 .fill(color.opacity(isMage ? 0.35 : 0.5))
                 .overlay(Circle().stroke(selected ? Theme.gold : color, lineWidth: selected ? 3 : 1.5))
                 .frame(width: cell*0.78, height: cell*0.78)
-            if isMage, let cid = u.mageClassId, let cls = MageRoster.byId(cid) {
+            if isMage, let cid = mageClassId, let cls = MageRoster.byId(cid) {
                 ElementGlyph(kind: cls.element, size: cell*0.4)
-            } else if u.isBoss {
+            } else if isBoss {
                 StarShape().fill(Theme.danger).frame(width: cell*0.4, height: cell*0.4)
             } else {
-                EnemyGlyph(behavior: u.behavior, size: cell*0.42)
+                EnemyGlyph(behavior: behavior, size: cell*0.42)
             }
-            if u.stunned {
+            if stunned {
                 Text("!").font(.system(size: cell*0.3, weight: .black)).foregroundColor(Theme.storm)
                     .offset(y: -cell*0.32)
             }
@@ -200,7 +209,7 @@ struct UnitTokenView: View {
                     ZStack(alignment: .leading) {
                         Capsule().fill(Color.black.opacity(0.5))
                         Capsule().fill(isMage ? Theme.success : Theme.danger)
-                            .frame(width: g.size.width * CGFloat(max(0, u.hp)) / CGFloat(max(1,u.maxHP)))
+                            .frame(width: g.size.width * CGFloat(max(0, hp)) / CGFloat(max(1, maxHP)))
                     }
                 }
                 .frame(height: cell*0.10)
@@ -208,14 +217,6 @@ struct UnitTokenView: View {
             .frame(width: cell*0.7, height: cell*0.7)
         }
     }
-}
-
-// Lightweight observable wrapper so token redraws when the BattleUnit class mutates
-// (BattleUnit is a class, not @Published; the engine sends objectWillChange which
-// re-renders the whole grid, so this simply holds the reference).
-final class UnitObservable: ObservableObject {
-    let unit: BattleUnit
-    init(_ u: BattleUnit) { self.unit = u }
 }
 
 struct EnemyGlyph: View {
